@@ -1,0 +1,29 @@
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Calculadora</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+
+      <div class="mb-3">
+        <label for="valor1" class="form-label">Valor 1</label>
+        <input type="text" [value]="valor1"   (input)="onValor1($event)" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="valor2" class="form-label">Valor 2</label>
+        <input type="text"[value]="valor2" (input)="onValor2($event)" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label for="result" class="form-label">Resultado</label>
+        <input type="text" [value]="result" class="form-control" disabled>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <app-cal-options [valor1]="valor1" [valor2]="valor2" (option)="generateResult($event)"></app-cal-options>
+      </div>
+
+    </div>
+  </div>
+</div>
